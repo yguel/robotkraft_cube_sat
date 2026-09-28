@@ -147,6 +147,17 @@ smooth_pins_sat_gen = [
 ]
 
 
+def corner_debug_gen(shape_gen=sats_gen[0], debug: bool = False):
+    """Just provide a corner for testing the feature."""
+    corner_box = (
+        cq.Workplane("ZX")
+        .box(20, 20, 200, centered=(True, True, True))
+        .translate((50, 0, 50))
+    )
+    s = shape_gen().intersect(corner_box)
+    return lambda: s
+
+
 str_size = "improved"
 color_table = ["blue", "green", "red", "yellow", "pink", "cyan"]
 full_model_info = {}
@@ -158,6 +169,14 @@ for i in range(len(TR_Y)):
         "export": True,
         "display": True,
     }
+    if DEBUG:
+        full_model_info[f"corner_part{i + 1}"] = {
+            "name": f"corner_part{i + 1}_" + str_size,
+            "gen": corner_debug_gen(smooth_pins_sat_gen[i]),
+            "color": color_table[i % len(color_table)],
+            "export": True,
+            "display": True,
+        }
 
 
 if export_stl_step:
