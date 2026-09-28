@@ -3,7 +3,7 @@ Credits
 #############
 
 This is a Cube Satellite project to be assembled by robots in the robotkraft challenge.
-The model is adapted from the original design by Ridwan Sept (8th winner of the CubeSat challenge) available at : "grabcad <https://grabcad.com/library/cube-brick-1>"_
+The model is adapted from the original design by Ridwan Sept (8th winner of the "CubeSat challenge <https://grabcad.com/challenges/the-cubesat-challenge/results>"_) available at : "grabcad <https://grabcad.com/library/cube-brick-1>"_
 
 The original design has snap-fit features for easy assembly, but that are not suitable for the challenge because they are very difficult to disassemble, which is why this project adapts the design for robotkraft.
 
