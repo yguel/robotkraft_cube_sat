@@ -1,0 +1,7 @@
+[project]
+name = "robotkraft-cube-sat"
+version = "0.1.0"
+description = "Cube Satellite project to be assembled by robots in robotkraft challenge"
+readme = "README.rst"
+requires-python = ">=3.14"
+dependencies = ["cadquery>=2.8.0", "cq-editor>=0.7.0", "typeguard>=4.6.0"]
